@@ -1,0 +1,13 @@
+.footer {
+  background-color: #222;
+  position: sticky;
+  bottom: 0;
+}
+
+.navigation {
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
