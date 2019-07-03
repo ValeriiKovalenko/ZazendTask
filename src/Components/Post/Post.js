@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Post.module.css';
 
 const Post = ({ posts, zoomArticle, currentPhotos }) => {
-  const randomNumbers = Math.floor(Math.random() * 100);
+  // const randomNumbers = Math.floor(Math.random() * 100);
   // console.log('CURRENT PHOTOS: ', currentPhotos);
   // const img = `https://picsum.photos/id/${randomNumbers}/200/300`;
   const img = id => `https://picsum.photos/id/${id}/300/300`;

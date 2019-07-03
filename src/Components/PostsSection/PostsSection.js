@@ -67,6 +67,12 @@ export default class PostsSection extends Component {
     });
   };
 
+  exitModal = event => {
+    if (event.targer.tagName !== 'DIV') {
+      this.setState({ isOpenModal: false });
+    }
+  };
+
   render() {
     const {
       posts,

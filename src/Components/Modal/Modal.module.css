@@ -1,0 +1,11 @@
+.modalWindow {
+  position: absolute;
+  top: 11vh;
+  display: block;
+  margin: 0 auto;
+  width: 85vw;
+  height: 100vh;
+  background-color: rgba(66, 66, 66, 0.911);
+  color: white;
+  z-index: 2;
+}

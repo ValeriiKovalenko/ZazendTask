@@ -7,13 +7,17 @@ function NavBar() {
   return (
     <header className={styles.header}>
       <img src={logo} width="100" height="100" alt="logoImage" />
-      <nav>
-        <NavLink exact to="/">
+      <nav className={styles.navigation}>
+        <NavLink className={styles.link} exact to="/">
           Main
         </NavLink>
 
-        <NavLink to="/About">About</NavLink>
-        <NavLink to="/contact">Contact us</NavLink>
+        <NavLink className={styles.link} to="/About">
+          About
+        </NavLink>
+        <NavLink className={styles.link} to="/contact">
+          Contact us
+        </NavLink>
       </nav>
     </header>
   );

@@ -5,9 +5,12 @@
 }
 
 .navigation {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .link {
+  margin: 0 5px 0 5px;
   text-decoration: none;
   color: white;
 }
