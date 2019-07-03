@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PostsSection from '../../Components/PostsSection/PostsSection';
 
-const Main = () => {
-  return (
-    <div>
-      <p>Main</p>
-    </div>
-  );
-};
+export default class Main extends Component {
+  state = {};
 
-export default Main;
+  render() {
+    return (
+      <main>
+        <PostsSection />
+      </main>
+    );
+  }
+}

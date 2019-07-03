@@ -1,0 +1,17 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 300px;
+  border: solid 1px rgb(112, 112, 112);
+
+}
+
+/* .article:hover {
+  background-color: #222;
+} */
+
+.zoomedArticle {
+  display: block;
+  color: red;
+}
