@@ -1,11 +1,64 @@
 .modalWindow {
-  position: absolute;
+  position: fixed;
   top: 11vh;
   display: block;
   margin: 0 auto;
   width: 85vw;
   height: 100vh;
-  background-color: rgba(66, 66, 66, 0.911);
+  background-color: rgba(66, 66, 66, 0.973);
   color: white;
   z-index: 2;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.title {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 5px;
+}
+
+.image {
+  width: 300px;
+  max-height: 300px;
+
+  border-radius: 5px;
+  filter: grayscale(1)
+}
+
+.text {
+  font-size: 1.5rem;
+  width: 80%;
+  margin-left: 5%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.coments {
+  width: 90%;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .mainInfo {
+    flex-direction: column;
+  }
+
+  .title {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .image {
+    margin: 0 auto;
+    max-width: 300px;
+  }
 }

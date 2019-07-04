@@ -1,10 +1,7 @@
 import React from 'react';
 import styles from './Post.module.css';
 
-const Post = ({ posts, zoomArticle, currentPhotos }) => {
-  // const randomNumbers = Math.floor(Math.random() * 100);
-  // console.log('CURRENT PHOTOS: ', currentPhotos);
-  // const img = `https://picsum.photos/id/${randomNumbers}/200/300`;
+const Post = ({ posts, zoomArticle }) => {
   const img = id => `https://picsum.photos/id/${id}/300/300`;
 
   return (
@@ -14,8 +11,12 @@ const Post = ({ posts, zoomArticle, currentPhotos }) => {
       data-id={posts.id}
     >
       <img src={img(posts.id)} alt="articleImage" />
-      <h3 data-id={posts.id}>{posts.title} </h3>
-      <p data-id={posts.id}>{posts.body}</p>
+      <h3 className={styles.title} data-id={posts.id}>
+        {posts.title}{' '}
+      </h3>
+      <p className={styles.text} data-id={posts.id}>
+        {posts.body}
+      </p>
     </article>
   );
 };

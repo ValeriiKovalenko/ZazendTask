@@ -2,6 +2,8 @@
   background-color: #222;
   position: sticky;
   bottom: 0;
+  z-index: 3;
+  border-radius: 2px;
 }
 
 .navigation {
@@ -13,4 +15,9 @@
   margin: 0 5px 0 5px;
   text-decoration: none;
   color: white;
+}
+
+.link:hover {
+  background-color: #fff;
+  color: #222;
 }

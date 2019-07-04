@@ -4,14 +4,28 @@
   flex-wrap: wrap;
   max-width: 300px;
   border: solid 1px rgb(112, 112, 112);
-
+  border-radius: 5px;
+  transition: .4s;
+  margin: 2px;
+  margin-bottom: 5%;
 }
 
-/* .article:hover {
-  background-color: #222;
-} */
+.article:hover {
 
-.zoomedArticle {
-  display: block;
-  color: red;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  width: 90%;
+  margin: 0 auto;
+  color: rgb(71, 71, 71);
+  margin-bottom: .5rem;
+  border-bottom: solid 3px rgba(231, 44, 44, 0.781);
+}
+
+.text {
+  margin: 0 auto;
+  color: rgb(112, 112, 112);
+  width: 80%;
+  text-align: left;
 }

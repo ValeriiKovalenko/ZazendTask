@@ -2,7 +2,33 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 2px;
 
+}
+
+
+
+.button {
+  text-decoration: none;
+  outline: none;
+  display: block;
+  color: white;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(to left, rgb(218, 213, 213) 10%, #FFEFBA);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.button:hover {
+  background-position: right center;
 
 }
 

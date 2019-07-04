@@ -44,19 +44,15 @@ export default class PostsSection extends Component {
   };
 
   zoomArticle = (idPost, img) => {
-    console.log('idPost.id: ', idPost);
     const postCommentsArr = this.state.comments.filter(
       el => el.postId === Number(idPost),
     );
-
-    console.log('postCommetstsArr: ', postCommentsArr);
 
     const currentPost = this.state.posts.find(el => el.id === Number(idPost));
     const currentPhotos = this.state.photos.filter(
       el => el.id === Number(idPost),
     );
 
-    // console.log('currentPost :', currentPost);
     this.setState({
       postCommentsArr,
       img,
@@ -67,62 +63,52 @@ export default class PostsSection extends Component {
     });
   };
 
-  exitModal = event => {
-    if (event.targer.tagName !== 'DIV') {
-      this.setState({ isOpenModal: false });
-    }
+  exitModal = () => {
+    this.setState({ isOpenModal: false });
   };
 
   render() {
     const {
       posts,
-      photos,
       img,
-      // coments,
       postCommentsArr,
       currentPost,
       isOpenModal,
-      currentPhotos,
     } = this.state;
 
-    // console.log('viiiisible ', this.state.visiblePosts);
-    // function addMorePosts() {
-    //   let x = x + 10;
-    //   setState(visiblePosts: cuttedPosts)
-    // }
     posts.length = this.state.length;
 
-    console.log('LENGTH: ', this.state.length);
-    // console.log('11111:  ', currentPhotos);
-
-    const cuttedPosts = this.state.posts.slice(0, 5);
-    console.log('AAAAAA: ', cuttedPosts);
     return (
-      <section className={styles.section}>
-        {posts.map(item => (
-          <Post
-            key={item.id}
-            posts={item}
-            zoomArticle={this.zoomArticle}
-            postCommentsArr={this.postCommentsArr}
-            currentPhotos={this.currentPhotos}
-          />
-        ))}
+      <>
+        <section className={styles.section}>
+          {posts.map(item => (
+            <Post
+              key={item.id}
+              posts={item}
+              zoomArticle={this.zoomArticle}
+              postCommentsArr={this.postCommentsArr}
+              currentPhotos={this.currentPhotos}
+            />
+          ))}
+
+          {isOpenModal && (
+            <Modal
+              exitModal={this.exitModal}
+              currentPost={currentPost}
+              postCommentsArr={postCommentsArr}
+              img={img}
+            />
+          )}
+        </section>
         <button
+          className={styles.button}
           onClick={() => {
-            alert('YEE');
+            alert('Here you will fing pagination, soon:)');
           }}
         >
-          Add more
+          Add more posts
         </button>
-        {isOpenModal && (
-          <Modal
-            currentPost={currentPost}
-            postCommentsArr={postCommentsArr}
-            img={img}
-          />
-        )}
-      </section>
+      </>
     );
   }
 }

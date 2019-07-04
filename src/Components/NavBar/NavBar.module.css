@@ -6,8 +6,15 @@
   z-index: 3;
   height: 10vh;
   margin-bottom: 5vh;
-  background-color: rgb(136, 136, 136);
-  border: solid 2px rgba(22, 22, 22, .5);
+  background: #FFEFBA;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  border: solid 1px rgba(75, 75, 75, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
@@ -15,7 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 25vw;
+  width: 40vw;
   font-size: 1.5rem;
 
 }
@@ -23,14 +30,16 @@
 .link {
   margin: 0 5% 0 5%;
   text-decoration: none;
-  color: white;
-  transition: .6s;
+
+  color: rgb(51, 51, 51);
+  transition: .3s;
+  font-weight: 600;
 }
 
 .link:hover {
   color: rgb(241, 95, 95);
   text-shadow: 1px 1px 1px rgb(56, 56, 56);
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid rgb(241, 95, 95);
 }
 
 
@@ -40,5 +49,27 @@
   .header {
     width: 100%;
     justify-content: space-around;
+  }
+
+  .navigation {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .link {
+
+    font-size: 1rem;
+
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .header {
+    width: 100%;
+  }
+
+  .link {
+    font-size: .5rem;
+    margin-top: 5px;
   }
 }
